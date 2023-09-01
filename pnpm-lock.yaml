@@ -42,6 +42,11 @@ dependencies:
     specifier: 5.2.2
     version: 5.2.2
 
+devDependencies:
+  husky:
+    specifier: ^8.0.3
+    version: 8.0.3
+
 packages:
 
   /@aashutoshrathi/word-wrap@1.2.6:
@@ -1387,6 +1392,12 @@ packages:
     dependencies:
       function-bind: 1.1.1
     dev: false
+
+  /husky@8.0.3:
+    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
 
   /ignore@5.2.4:
     resolution: {integrity: sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==}
