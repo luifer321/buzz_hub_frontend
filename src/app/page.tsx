@@ -1,9 +1,7 @@
-import Sidebar from "@/components/organisms/Sidebar";
-
 export default function Home() {
   return (
     <div>
-      <Sidebar />
+      <h2>This is Home page</h2>
     </div>
   );
 }

@@ -4,11 +4,11 @@ import SidebarItem from "@/components/molecules/SidebarItem";
 
 const Sidebar: FC = () => {
   return (
-    <section className="flex flex-col gap-1">
+    <nav className="flex flex-col gap-1">
       {sidebarItems.map((item) => (
         <SidebarItem key={item.name} {...item} />
       ))}
-    </section>
+    </nav>
   );
 };
 

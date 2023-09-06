@@ -6,7 +6,7 @@ const SidebarItem: FC<ISidebarItem> = ({ name, icon, path }) => {
   return (
     <Link
       href={path}
-      className="flex items-center rounded-full gap-x-2 px-3 py-1 cursor-pointer w-fit hover:bg-[#E5D4ED]"
+      className="flex items-center rounded-full gap-x-2 px-3 py-1 cursor-pointer w-fit hover:bg-[#E5D4ED] text-white"
     >
       {icon}
       <span>{name}</span>
