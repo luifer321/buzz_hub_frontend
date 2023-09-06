@@ -1,17 +1,17 @@
-import { renderIcon } from "@/shared/helpers/sidebar";
+import { FC } from "react";
 import { ISidebarItem } from "@/shared/interfaces/ISidebarItem";
+import Link from "next/link";
 
-type SidebarItemProps = {
-  item: ISidebarItem;
-};
-
-function SidebarItem({ item }: SidebarItemProps) {
+const SidebarItem: FC<ISidebarItem> = ({ name, icon, path }) => {
   return (
-    <div className="flex justify-center items-center gap-x-2 px-1 py-2 cursor-pointer rounded-md hover:bg-gray-300">
-      {renderIcon(item.icon)}
-      <span>{item.name}</span>
-    </div>
+    <Link
+      href={path}
+      className="flex items-center rounded-full gap-x-2 px-3 py-1 cursor-pointer w-fit hover:bg-[#E5D4ED]"
+    >
+      {icon}
+      <span>{name}</span>
+    </Link>
   );
-}
+};
 
 export default SidebarItem;
