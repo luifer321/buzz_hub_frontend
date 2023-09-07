@@ -6,16 +6,16 @@ import { ISidebarItem } from "@/shared/interfaces/ISidebarItem";
 
 const SidebarItem: FC<ISidebarItem> = ({ name, icon, path, activeIcon }) => {
   const pathname = usePathname();
-  console.log(pathname);
+  const isActive = pathname == path;
 
   return (
     <Link
       href={path}
       className={`${
-        pathname == path ? "font-bold" : ""
+        isActive ? "font-bold" : ""
       } flex items-center rounded-full gap-x-2 px-3 py-1 cursor-pointer w-fit hover:bg-slate-400 text-white`}
     >
-      {pathname == path ? activeIcon : icon}
+      {isActive ? activeIcon : icon}
       <span>{name}</span>
     </Link>
   );
