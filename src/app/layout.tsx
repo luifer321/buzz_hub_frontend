@@ -1,6 +1,7 @@
-import Sidebar from "@/components/organisms/Sidebar";
 import "./globals.css";
+import LoginView from "@/views/Login";
 import { Inter } from "next/font/google";
+import Sidebar from "@/components/organisms/Sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,10 @@ export default function RootLayout({
             <Sidebar />
           </header>
           <main className="flex flex-1 flex-row">
-            <div className="content">{children}</div>
+            <div className="content">
+              {children}
+              <LoginView />
+            </div>
             <div className="w-64"></div>
           </main>
         </div>
