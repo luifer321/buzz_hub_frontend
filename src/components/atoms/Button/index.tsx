@@ -1,12 +1,19 @@
 import { FC } from "react";
 import { IButton } from "@/shared/interfaces/IButton";
-import { EnumFontSize, EnumHeigth } from "@/shared/interfaces/ITextField";
+import {
+  EnumColor,
+  EnumFontSize,
+  EnumHeigth,
+} from "@/shared/interfaces/IButton";
 
-export const Button: FC<IButton> = ({ text, placeholder, size = "md" }) => {
+export const Button: FC<IButton> = ({
+  text,
+  size = "md",
+  color = "slate80",
+}) => {
   return (
     <button
-      className={`${EnumHeigth[size]} ${EnumFontSize[size]} bg-slate-800 w-full placeholder:text-gray-300 text-white outline-none  focus:outline-none rounded`}
-      placeholder={placeholder}
+      className={`${EnumHeigth[size]} ${EnumFontSize[size]} ${EnumColor[color]} w-full text-white outline-none  focus:outline-none rounded`}
     >
       {text}
     </button>
