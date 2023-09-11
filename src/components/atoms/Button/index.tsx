@@ -4,17 +4,21 @@ import {
   EnumColor,
   EnumFontSize,
   EnumHeigth,
+  EnumWidth,
 } from "@/shared/interfaces/IButton";
 
 export const Button: FC<IButton> = ({
   text,
+  icon,
   size = "md",
   color = "slate80",
+  width = "fit",
 }) => {
   return (
     <button
-      className={`${EnumHeigth[size]} ${EnumFontSize[size]} ${EnumColor[color]} w-full text-white outline-none  focus:outline-none rounded`}
+      className={`${EnumHeigth[size]} ${EnumFontSize[size]} ${EnumColor[color]} ${EnumWidth[width]} gap-3 px-3 py-3 flex items-center justify-center text-white outline-none focus:outline-none rounded`}
     >
+      {icon}
       {text}
     </button>
   );
