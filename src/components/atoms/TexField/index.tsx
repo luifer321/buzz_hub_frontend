@@ -16,7 +16,7 @@ const TextField: FC<ITextField> = ({
   const [showEye, setShowEye] = useState<boolean>(false);
   const handleShow = () => setShowEye(!showEye);
 
-  const isPass = type === "password";
+  const isPassword = type === "password";
   const IconComponent = showEye ? AiFillEye : AiFillEyeInvisible;
 
   return (
@@ -30,12 +30,12 @@ const TextField: FC<ITextField> = ({
         className={`${EnumHeigth[size]} ${
           EnumFontSize[size]
         } bg-slate-600 w-full p-3 ${
-          isPass && "pr-9"
+          isPassword && "pr-9"
         } placeholder:text-gray-300 text-white outline-none  focus:outline-none rounded-r`}
         placeholder={placeholder}
         type={showEye ? "text" : type}
       />
-      {isPass && (
+      {isPassword && (
         <IconComponent
           onClick={handleShow}
           className={`${EnumFontSize[size]} cursor-pointer text-white mx-3 w-4 h-4 absolute right-0 bg-slate-600`}
