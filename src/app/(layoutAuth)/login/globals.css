@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgb(2 6 23);
+}
+
+h1, h2, h3, h4, h5, h6, p, span, label {
+  color: white;
+}
+
+.content {
+  flex: 1;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-width: 0 0.5px;
+  padding: 0 30px;
+}
+
