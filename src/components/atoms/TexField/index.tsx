@@ -5,13 +5,15 @@ import {
   EnumHeigth,
   EnumFontSize,
   ITextField,
+  EnumColor,
 } from "@/shared/interfaces/ITextField";
 
 const TextField: FC<ITextField> = ({
   placeholder,
   type,
-  size = "md",
+  size = "lg",
   icon,
+  color = "slate30",
 }) => {
   const [showEye, setShowEye] = useState<boolean>(false);
   const handleShow = () => setShowEye(!showEye);
@@ -21,15 +23,17 @@ const TextField: FC<ITextField> = ({
 
   return (
     <div className="relative flex items-center rounded focus-within:outline focus-within:outline-slate-400 duration-150">
-      <span
-        className={`${EnumHeigth[size]} ${EnumFontSize[size]} bg-slate-700 w-10 p-3 flex items-center justify-center rounded-l text-white`}
-      >
-        {icon}
-      </span>
+      {icon && (
+        <span
+          className={`${EnumHeigth[size]} ${EnumFontSize[size]} ${EnumColor[color]}  w-10 p-3 flex items-center justify-center rounded-l text-white`}
+        >
+          {icon}
+        </span>
+      )}
       <input
         className={`${EnumHeigth[size]} ${
           EnumFontSize[size]
-        } bg-slate-600 w-full p-3 ${
+        } bg-slate-600 w-full pl-3 ${!icon && "p-3 rounded"} ${
           isPassword && "pr-9"
         } placeholder:text-gray-300 text-white outline-none  focus:outline-none rounded-r`}
         placeholder={placeholder}

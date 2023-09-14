@@ -10,7 +10,7 @@ import {
 export const Button: FC<IButton> = ({
   text,
   icon,
-  size = "md",
+  size = "lg",
   color = "slate80",
   width = "fit",
 }) => {

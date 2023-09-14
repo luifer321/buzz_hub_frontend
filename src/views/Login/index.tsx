@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import Image from "next/image";
 import { BiSolidUser } from "react-icons/bi";
 import { AiFillLock } from "react-icons/ai";
@@ -8,7 +9,7 @@ import TextField from "@/components/atoms/TexField";
 const LoginView = () => {
   return (
     <div className="flex justify-center items-center h-screen">
-      <div className="flex flex-col gap-2 bg-slate-900 rounded-lg px-12 pt-7 pb-12">
+      <div className="flex flex-col gap-2 bg-slate-900 rounded-lg px-12 pt-7 pb-7">
         <div className="flex items-center justify-center gap-2">
           <Image src="/logo-name.png" width={90} height={90} alt="logo"></Image>
         </div>
@@ -17,15 +18,18 @@ const LoginView = () => {
           type="text"
           placeholder="Usuario"
           icon={<BiSolidUser />}
-          size="lg"
+          color="slate70"
         />
         <TextField
           type="password"
           placeholder="Contraseña"
           icon={<AiFillLock />}
-          size="lg"
+          color="slate70"
         />
-        <Button text="Sign In" size="md" width="full" color="slate80" />
+        <Button text="Sign In" width="full" color="slate80" />
+        <Link href="/register" className="text-white text-sm font-light pl-3">
+          No account? Create one!
+        </Link>
       </div>
     </div>
   );
