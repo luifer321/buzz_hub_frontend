@@ -8,7 +8,7 @@ import {
   EnumColor,
 } from "@/shared/interfaces/ITextField";
 
-const TextField: FC<ITextField> = ({
+export const TextField: FC<ITextField> = ({
   placeholder,
   type,
   size = "lg",
@@ -48,5 +48,3 @@ const TextField: FC<ITextField> = ({
     </div>
   );
 };
-
-export default TextField;

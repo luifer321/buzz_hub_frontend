@@ -3,13 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { BiSolidUser } from "react-icons/bi";
 import { AiFillLock } from "react-icons/ai";
-import { Button } from "@/components/atoms/Button";
-import TextField from "@/components/atoms/TexField";
+import { Button, TextField } from "@/components";
 
 const LoginView = () => {
   return (
     <div className="flex justify-center items-center h-screen">
-      <div className="flex flex-col gap-2 bg-slate-900 rounded-lg px-12 pt-7 pb-7">
+      <div className="flex flex-col gap-2 bg-slate-900 rounded-lg px-12 py-7 max-sm:px-6">
         <div className="flex items-center justify-center gap-2">
           <Image src="/logo-name.png" width={90} height={90} alt="logo"></Image>
         </div>
