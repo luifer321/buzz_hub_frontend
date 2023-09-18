@@ -1,26 +1,15 @@
 import "./globals.css";
+import { ReactNode } from "react";
 import { Inter } from "next/font/google";
-import Sidebar from "@/components/organisms/Sidebar";
+import { LayoutGeneral } from "@/shared/layouts";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="container m-auto flex flex-row min-h-screen">
-          <header className="w-64">
-            <Sidebar />
-          </header>
-          <main className="flex flex-1 flex-row">
-            <div className="content">{children}</div>
-            <div className="w-64"></div>
-          </main>
-        </div>
+        <LayoutGeneral>{children}</LayoutGeneral>
       </body>
     </html>
   );

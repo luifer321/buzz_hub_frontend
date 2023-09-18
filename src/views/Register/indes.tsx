@@ -7,7 +7,7 @@ import { Button } from "@/components/atoms/Button";
 const RegisterView = () => {
   return (
     <div className="flex justify-center items-center h-screen">
-      <div className="flex flex-col gap-2 bg-slate-900 rounded-lg px-8 pb-5 pt-5">
+      <div className="flex flex-col gap-2 bg-slate-900 rounded-lg px-8 py-5 max-sm:px-6 max-sm:w-80">
         <div className="flex items-center justify-center">
           <Image src="/logo-name.png" width={90} height={90} alt="logo"></Image>
         </div>
@@ -15,7 +15,7 @@ const RegisterView = () => {
         <h1 className="mb-1 flex justify-center text-md font-light	">
           Create your account
         </h1>
-        <div className="flex gap-2">
+        <div className="flex gap-2 max-sm:flex-col">
           <TextField type="text" placeholder="Name" color="slate60" />
           <TextField type="text" placeholder="Email" color="slate60" />
         </div>
